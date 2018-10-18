@@ -38,7 +38,7 @@ resource "aws_autoscaling_group" "webserver_example" {
   }
 }
 
-data "aws_availability_zones" "all" {}
+data "aws_availability_zones" "us-east-1a" {}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # CREATE THE LAUNCH CONFIGURATION
