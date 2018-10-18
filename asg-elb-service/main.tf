@@ -121,7 +121,7 @@ resource "aws_security_group_rule" "asg_allow_http_inbound" {
 resource "aws_elb" "webserver_example" {
   name               = "${var.name}"
   availability_zones = ["${data.aws_availability_zone.all.name}"]
-  security_groups    = ["${aws_security_group.elb.id}"]
+  security_groups    = ["sg-d60c13ba"]
 
   listener {
     lb_port           = "${var.elb_port}"
