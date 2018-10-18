@@ -118,7 +118,7 @@ resource "aws_security_group_rule" "asg_allow_http_inbound" {
 
 resource "aws_elb" "webserver_example" {
   name               = "${var.name}"
-  availability_zones = ["${data.aws_availability_zones.all.names}"]
+  availability_zones = ["us-east-1a"]
   security_groups    = ["${aws_security_group.elb.id}"]
 
   listener {
