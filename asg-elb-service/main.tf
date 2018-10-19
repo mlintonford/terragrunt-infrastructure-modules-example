@@ -123,6 +123,7 @@ resource "aws_elb" "webserver_example" {
   availability_zones = ["${data.aws_availability_zone.all.name}"]
   security_groups    = ["sg-d60c13ba"]
 
+
   listener {
     lb_port           = "${var.elb_port}"
     lb_protocol       = "http"
@@ -156,7 +157,7 @@ resource "aws_security_group_rule" "elb_allow_http_inbound" {
   to_port           = "${var.elb_port}"
   protocol          = "tcp"
   cidr_blocks       = ["0.0.0.0/0"]
-  security_group_id = "${aws_security_group.elb.id}"
+  security_group_id = "sg-d60c13ba"
 }
 
 resource "aws_security_group_rule" "elb_allow_all_outbound" {
