@@ -148,6 +148,7 @@ resource "aws_elb" "webserver_example" {
 
 resource "aws_security_group" "elb" {
   name = "${var.name}-elb"
+  vpc_id      = "vpc-61b95209"
 }
 
 resource "aws_security_group_rule" "elb_allow_http_inbound" {
