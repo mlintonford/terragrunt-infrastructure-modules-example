@@ -98,7 +98,7 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_security_group" "asg" {
   name = "${var.name}-asg"
-  vpc_id      = "${aws_vpc.main.id}"
+  vpc_id      = "vpc-61b95209"
 
   lifecycle {
     create_before_destroy = true
