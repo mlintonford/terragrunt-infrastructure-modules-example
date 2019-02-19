@@ -111,7 +111,7 @@ data "aws_ami" "windows" {
 
   filter {
     name   = "name"
-    values = ["amazon/Windows_Server-2016-English-Core-Base-2019.02.09"]
+    values = ["Windows_Server-2016-English-Core-Base-2019.02.09"]
   }
 }
 
