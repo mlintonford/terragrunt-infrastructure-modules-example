@@ -156,8 +156,8 @@ resource "aws_elb" "webserver_example" {
   }
 
   health_check {
-    healthy_threshold   = 1
-    unhealthy_threshold = 1
+    healthy_threshold   = 2
+    unhealthy_threshold = 2
     timeout             = 3
     interval            = 30
     target              = "HTTP:${var.server_port}/"
